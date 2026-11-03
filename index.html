@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Dinner Invitation for Sakshi</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f8e9df, #f5d6c6);
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+}
+
+.card {
+    background: #fffaf5;
+    max-width: 480px;
+    width: 100%;
+    padding: 45px 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 50px #895d4a25;
+    border: 1px solid #ead6c7;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {opacity: 0; transform: translateY(25px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.emoji {
+    font-size: 55px;
+    margin-bottom: 18px;
+}
+
+.tag {
+    color: #a56c53;
+    letter-spacing: 3px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h1 {
+    color: #53372d;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    margin: 18px 0;
+}
+
+.description {
+    color: #80685c;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.menu {
+    background: #f8eee6;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 25px 0;
+    text-align: left;
+}
+
+.menu h3 {
+    color: #79513d;
+    margin-bottom: 13px;
+    text-align: center;
+}
+
+.menu p {
+    color: #755d50;
+    padding: 7px 0;
+    font-size: 14px;
+}
+
+.question {
+    font-family: Georgia, serif;
+    color: #583b30;
+    font-size: 21px;
+    margin: 25px 0 18px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+    padding: 13px 27px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.yes {
+    background: #98684f;
+    color: white;
+}
+
+.yes:hover {
+    background: #704630;
+    transform: scale(1.07);
+}
+
+.no {
+    background: #eee0d6;
+    color: #765746;
+}
+
+.footer {
+    color: #b29b8d;
+    font-size: 11px;
+    margin-top: 28px;
+}
+
+#response {
+    display: none;
+    margin-top: 25px;
+    color: #80523e;
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="emoji">🍽️✨</div>
+
+    <div class="tag">A Special Invitation</div>
+
+    <h1>Hey Sakshi!</h1>
+
+    <p class="description">
+        I have a very important question for you.
+        Something more important than all your pending work
+        and definitely more exciting than a regular evening!
+    </p>
+
+    <div class="menu">
+        <h3>Tonight's Dinner Menu 🤌</h3>
+
+        <p>🥛 Kettle Made Doodh Wali Seviyan</p>
+        <p>🍝 Something even more delicious</p>
+        <p>🍟 A little extra food, because why not?</p>
+        <p>🍫 Sweet conversations & good vibes</p>
+    </div>
+
+    <div class="question">
+        So, Sakshi...<br>
+        Dinner with me today?
+    </div>
+
+    <div class="buttons">
+        <button class="yes" onclick="sayYes()">
+            YES! ❤️
+        </button>
+
+        <button class="no" onclick="sayNo()">
+            Maybe later 🙈
+        </button>
+    </div>
+
+    <div id="response"></div>
+
+    <div class="footer">
+        MADE WITH GOOD FOOD & GOOD INTENTIONS ♡
+    </div>
+
+</div>
+
+<script>
+function sayYes() {
+    document.getElementById("response").style.display = "block";
+    document.getElementById("response").innerHTML =
+    "YAYYYY! 🥹❤️<br>It's officially a dinner date!<br>Get ready, Sakshi. Good food awaits! 🍽️";
+}
+
+function sayNo() {
+    document.getElementById("response").style.display = "block";
+    document.getElementById("response").innerHTML =
+    "Are you sure? 🥺<br>Even the seviyan will be disappointed! 😂<br>One more chance?";
+}
+</script>
+
+</body>
+</html>
